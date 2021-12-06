@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cjeon <cjeon@student.42seoul.kr>           +#+  +:+       +#+        */
+/*   By: cjeon <student.42seoul.kr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 01:39:10 by cjeon             #+#    #+#             */
-/*   Updated: 2021/12/05 21:48:25 by cjeon            ###   ########.fr       */
+/*   Updated: 2021/12/06 13:52:06 by cjeon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,11 +58,11 @@ typedef t_si		(*t_arg_to_string)(char *buf, t_arg *arg, t_fi *fi);
 typedef void		(*t_get_arg)(t_arg *arg, va_list *va);
 typedef int			(*t_itoa_ulong)(char *buf, unsigned long long n, \
 										int base, const char *base_digit);
-typedef const char	*(*t_atoi_size_t)(const char *format, size_t *result);
+typedef const char*	(*t_atoi_size_t)(const char *format, size_t *result);
 typedef size_t		(*t_strnlen)(const char *str, size_t max_len);
-typedef const char	*(*t_process_type)(const char *format, t_fi *fi);
-typedef const char	*(*t_process_flags)(const char *format, t_fi *fi);
-typedef const char	*(*t_process)(const char *format, t_fi *fi);
+typedef const char*	(*t_process_type)(const char *format, t_fi *fi);
+typedef const char*	(*t_process_flags)(const char *format, t_fi *fi);
+typedef const char*	(*t_process)(const char *format, t_fi *fi);
 typedef ssize_t		(*t_putchar_repeat)(char c, size_t r);
 typedef ssize_t		(*t_parser)(const char *format, va_list *va);
 typedef size_t		(*t_find_normal_end)(const char *format);
